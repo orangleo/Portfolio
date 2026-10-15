@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #0b0f1a;
+  --color-panel: #12182b;
+  --color-panel-deep: #0f1424;
+  --color-foreground: #e5eaf3;
+  --color-muted: #94a3b8;
+  --color-accent: #6366f1;
+  --color-line: rgba(148, 163, 184, 0.15);
+
+  --radius-card: 16px;
+  --radius-btn: 12px;
+  --radius-tag: 8px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    margin: 0;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    background-image: radial-gradient(
+      ellipse 80% 60% at 50% -10%,
+      rgba(99, 102, 241, 0.14),
+      transparent 60%
+    );
+    font-family:
+      -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+      'Microsoft YaHei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: rgba(99, 102, 241, 0.35);
+  }
+}
+
+/* 代码高亮（rehype-highlight 输出 highlight.js 类名） */
+.hljs-comment,
+.hljs-quote {
+  color: #64748b;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag {
+  color: #818cf8;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute {
+  color: #86efac;
+}
+.hljs-number,
+.hljs-built_in,
+.hljs-symbol,
+.hljs-bullet {
+  color: #fbbf24;
+}
+.hljs-title,
+.hljs-section,
+.hljs-name {
+  color: #7dd3fc;
+}
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attr {
+  color: #f0abfc;
+}
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #fda4af;
+}
+.hljs-meta {
+  color: #94a3b8;
+}
+.hljs-deletion {
+  color: #f87171;
+}
